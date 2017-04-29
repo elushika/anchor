@@ -217,13 +217,13 @@
             			response('There is a fire!', 'Ok, could you please share your location?');
             			break;
 
-                    case 'correct':
-                        response('Yes', 'We will send an agency over');
-                        break;
+                    // case 'correct':
+                    //     response('Yes', 'We will send an agency over');
+                    //     break;
 
-                    case 'incorrect':
-                        response('No', 'Please share your location again');
-                        break;
+                    // case 'incorrect':
+                    //     response('No', 'Please share your location again');
+                    //     break;
 
             	}
 
@@ -232,9 +232,10 @@
             		case 'coned':
             			button('I do not have power', 'Ok, could you please share your location?');
             			button('I smell gas', 'Leave the building and share your location');
+                        button('Here is my location', 'function-getlocation');
                         button('Yes', 'We will look in to it');
                         button('No', 'Please share your location again');
-            			button('Here is my location', 'function-getlocation');
+            			
             			department = 'ConEdison';
             			break;
             		case 'nypd':
