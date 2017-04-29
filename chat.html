@@ -196,13 +196,13 @@
             			response('I do not have power', 'Ok, could you please share your location?');
             			break;
             		case 'invasion':
-            			response('I do not have power', 'Ok, could you please share your location?');
+            			response('There was a break-in', 'Could you please share your location?');
             			break;
             		case 'safety':
-            			response('Is it safe to go outside?', 'Currently it is not recommended. Emergencies only.');
+            			response('Is it safe to go outside?', 'Currently it is not recommended.');
             			break;
             		case 'medical':
-            			response('Is it safe to go outside?', 'Ok, could you please share your location?');
+            			response('I need medical help', 'Ok, could you please share your location?');
             			break;
             		case 'water':
             			response('Is the water safe to drink?', 'Yes it is! There is no water contamination.');
@@ -211,19 +211,29 @@
             			response('I need food and water', 'Ok, could you please share your location?');
             			break;
             		case 'stuck':
-            			response('Is it safe to go outside?', 'Please remain calm and share your location.');
+            			response('I am stuck and cant get out', 'Please remain calm and share your location.');
             			break;
             		case 'fire':
             			response('There is a fire!', 'Ok, could you please share your location?');
             			break;
+
+                    case 'correct':
+                        response('Correct', 'We will send someone over');
+                        break;
+
+                    case 'no':
+                        response('No', 'Please share your location again');
+                        break;
+
             	}
 
             	var department = null;
             	switch(depPar) {
             		case 'coned':
             			button('I do not have power', 'Ok, could you please share your location?');
-            			button('Is it safe to go outside?', 'Currently it is not recommended. Emergencies only.');
-            			button('I smell gas', '');
+            			button('I smell gas', 'Leave the building and share your location');
+                        button('Correct', 'We will look in to it');
+                        button('No', 'Please share your location again');
             			button('Here is my location', 'function-getlocation');
             			department = 'ConEdison';
             			break;
