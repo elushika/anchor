@@ -211,17 +211,17 @@
             			response('I need food and water', 'Ok, could you please share your location?');
             			break;
             		case 'stuck':
-            			response('I am stuck and cant get out', 'Please remain calm and share your location.');
+            			response('I am stuck and cannot get out', 'Please remain calm and share your location.');
             			break;
             		case 'fire':
             			response('There is a fire!', 'Ok, could you please share your location?');
             			break;
 
                     case 'correct':
-                        response('Correct', 'We will send someone over');
+                        response('Yes', 'We will send an agency over');
                         break;
 
-                    case 'no':
+                    case 'incorrect':
                         response('No', 'Please share your location again');
                         break;
 
@@ -232,7 +232,7 @@
             		case 'coned':
             			button('I do not have power', 'Ok, could you please share your location?');
             			button('I smell gas', 'Leave the building and share your location');
-                        button('Correct', 'We will look in to it');
+                        button('Yes', 'We will look in to it');
                         button('No', 'Please share your location again');
             			button('Here is my location', 'function-getlocation');
             			department = 'ConEdison';
